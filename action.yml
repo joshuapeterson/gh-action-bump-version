@@ -10,6 +10,10 @@ inputs:
   tag-prefix:
     description: 'Prefix that is used for the git tag'
     default: ''
+    required: false  
+  tag-postfix:
+    description: 'Postfix that is used for the git tag'
+    default: ''
     required: false
   PACKAGEJSON_DIR:
     description: 'Custom dir to the package'
