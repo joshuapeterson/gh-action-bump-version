@@ -3,11 +3,11 @@ name: "Bump Version"
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 jobs:
   bump-version:
-    name: "Bump Version on master"
+    name: "Bump Version on main"
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 12
       - name: "Automated Version Bump"
-        uses: "phips28/gh-action-bump-version@master"
+        uses: "joshuapeterson/gh-action-bump-version@main"
         with:
           tag-prefix: ''
         env:
