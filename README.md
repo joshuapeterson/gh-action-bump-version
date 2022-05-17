@@ -24,12 +24,14 @@ Make sure you use the `actions/checkout@v2` action!
 * Push a tag for the new version back into the repo.
 
 ### Usage:
-**tag-prefix:** Prefix that is used for the git tag  (optional). Example:
+**tag-prefix:** Prefix that is used for the git tag  (optional).
+**tag-postfix:** Prefix that is used for the git tag  (optional). Example:
 ```yaml
 - name:  'Automated Version Bump'
   uses:  ''
   with:
     tag-prefix:  ''
+    tag-postfix: ''
 ```
 **PACKAGEJSON_DIR:** Param to parse the location of the desired package.json (optional). Example:
 ```yaml
