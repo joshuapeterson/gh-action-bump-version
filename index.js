@@ -58,7 +58,7 @@ Toolkit.run(async tools => {
       ['version', '--allow-same-version=true', '--git-tag-version=false', current])
     console.log('current:', current, '/', 'version:', version)
     newVersion = execSync(`npm version --git-tag-version=false ${version}`).toString().trim()
-    newVersion = `${process.env['INPUT_TAG-PREFIX']}${newVersion}`
+    newVersion = `${process.env['INPUT_TAG-PREFIX']}${newVersion}${process.env['INPUT_TAG-POSTFIX']}`
     console.log('new version:', newVersion)
     try {
       // to support "actions/checkout@v1"
